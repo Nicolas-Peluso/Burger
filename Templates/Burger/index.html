@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static '/style/style.css'%}">
+    <title>The Burger Manager</title>
+</head>
+<body>
+    <form action="{% url  'Cadastro'%}" method="post">
+        {%csrf_token%}
+        <fieldset class="CampoLoginCliente">
+            <div class="Campo">
+                <label for="mail">Seu Email de Login</label>
+                <input name="email" type="email" id="mail" class="mail" required>
+                <label for="pass">Senha</label>
+                <input name="senha" type="password" id="pass" class="pass" required>
+                <button type="submit">Login</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
