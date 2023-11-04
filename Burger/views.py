@@ -16,7 +16,9 @@ def Cadastro(req):
         verificaEmail =  ValidarEmail(email);
 
         #verificação caso erro na validação
-        if verificaSenha != True and verificaEmail != True:
+        if not verificaSenha == True and not verificaEmail != True:
+            print(verificaEmail)
+            print(verificaSenha)
             return render(req, 'Burger/index.html')
         
         else:

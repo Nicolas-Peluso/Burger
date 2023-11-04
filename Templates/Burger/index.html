@@ -4,21 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{%static '/assets/icons/buguinhi.png'%}" type="image/x-icon">
     <link rel="stylesheet" href="{%static '/style/style.css'%}">
     <title>The Burger Manager</title>
 </head>
 <body>
-    <form action="{% url  'Cadastro'%}" method="post">
-        {%csrf_token%}
-        <fieldset class="CampoLoginCliente">
-            <div class="Campo">
-                <label for="mail">Seu Email de Login</label>
-                <input name="email" type="email" id="mail" class="mail" required>
-                <label for="pass">Senha</label>
-                <input name="senha" type="password" id="pass" class="pass" required>
-                <button type="submit">Login</button>
-            </div>
-        </fieldset>
-    </form>
+    <section class="containerFormLogin">
+
+        <section class="Image">
+            <img src="{%static '/assets/BurgerLoginPage.jpg'%}" alt="">
+        </section>
+
+        <section class="Form">
+            <form action="{% url  'Cadastro'%}" method="post">
+                {%csrf_token%}
+                <fieldset class="CampoLoginCliente">
+                    <div class="Campo">
+                        <h3>The Burger Manager</h3>
+                        <input name="email" type="email" id="mail" class="mail" required="true" placeholder="Email">
+                        <input name="senha" type="password" id="pass" class="pass" required="true" placeholder="Senha">
+                        <button type="submit">Login</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+</section>
 </body>
 </html>

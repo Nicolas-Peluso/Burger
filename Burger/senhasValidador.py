@@ -8,5 +8,5 @@ def validar_senha(senha):
     
     if not re.search(r'[A-Z]', senha):
         return 'senha deve ter uma letra maiuscula'
-
+    
     return True
