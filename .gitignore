@@ -1,3 +1,4 @@
 assets
 admin
 db.sqlite3
+.env
