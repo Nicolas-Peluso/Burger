@@ -33,4 +33,4 @@ def Cadastro(req):
             dados = {
             'usuario': email
             }
-            return render(req, 'formularioLoginBurger/login.html', dados);
+            return render(req, 'formularioCadastroBurger/login.html', dados);
